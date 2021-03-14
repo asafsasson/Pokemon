@@ -1,0 +1,516 @@
+﻿#oppoHpDisplay {
+    
+    color: green;
+    text-align: center;
+    font-size: 21px;
+    font-family: Verdana;
+    position: absolute;
+    bottom: 75px;
+    left: 140px;
+}
+
+#oppoNameDisplay {
+    color: green;
+    text-align: center;
+    font-size: 21px;
+    font-family: Verdana;
+    position: absolute;
+    bottom: 75px;
+    left: 303px;
+}
+
+#heroHpDisplay {
+    right: -55px;
+    color: green;
+    text-align: center;
+    font-size: 21px;
+    font-family: Verdana;
+    position: absolute;
+    bottom: 84px;
+    left: 75px;
+}
+
+#heroNameDisplay {
+    right: -55px;
+    color: green;
+    text-align: center;
+    font-size: 21px;
+    font-family: Verdana;
+    position: absolute;
+    bottom: 84px;
+    left: -303px;
+}
+
+
+
+
+.gifoppo {
+    position: relative;
+    right: 185px;
+    top: 15px;
+}
+  
+.gifhero {
+    position: relative;
+    right: -193px;
+    top: 15px;
+}
+   
+
+.background {
+    background-image: url('img/background-pokemon.png');
+    background-size: 100% 100%;
+    width: 1525px;
+    height: 700px;
+}
+
+.backgroundFight {
+    background-image: url('img/pokemonArena.png');
+    background-size: 100% 100%;
+    width: 1525px;
+    height: 700px;
+}
+
+.startimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+.starticon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    
+}
+
+.randomImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:100px;
+    width: 70%;
+    padding-bottom:80px;
+    
+
+}
+
+.attackbtn {
+    width: 200px;
+    height: 55px;
+    top: 15px;
+    float: left;
+    position: relative;
+    left: 47px;
+}
+#massageBoxup {
+    position: relative;
+    bottom: 186px;
+    color: #faff00;
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana;
+}
+
+.tdcard {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 350px;
+    width: 250px;
+}
+
+
+tdq img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 100px;
+}
+
+.tableCard {
+    height: 100%;
+    width: 100%;
+}
+.tableCardSmall {
+    height: 100%;
+    width: 100%;
+    
+    
+    
+}
+
+.tdChoose {
+    padding-bottom:80px;
+    vertical-align:bottom;
+}
+
+.tdChooseMe {
+    padding-left:140px;
+}
+
+.tdChooseom {
+    padding-left: 250px;
+}
+
+.tdChooseomm {
+    padding-left: 200px;
+}
+
+
+
+#choose1 {
+    padding-top: 100px;
+    height:50%;
+}
+
+table, th, td {
+    /*border: 3px solid black;*/ /***********************************************************************/
+    table-layout: fixed;
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+.trupper {
+  height:10% ;
+  font-size:11px;
+  
+  vertical-align:bottom;
+  
+}
+
+.trmid {
+    height: 45%
+}
+
+.trbuttom {
+    height: 45%;
+    /*text-align: center;*/ 
+}
+
+.tdbuttoma{
+    padding-left:20px;
+
+}
+
+.hpbar {
+    background-image: url('img/hpbar.png');
+    background-size: 100% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*width: 1525px;
+    height: 700px;*/
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;*/
+}
+.hpbarm {
+    background-image: url('img/hpbarm.png');
+    background-size: 100% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*width: 1525px;
+    height: 700px;*/
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;*/
+}
+
+
+
+
+.progressrtl[value]::-webkit-progress-value {
+    background-color: green;
+}
+
+.progressrtl[value]::-webkit-progress-bar {
+    background-color: red;
+}
+
+.progressrtl {
+    -webkit-appearance: none;
+    direction: rtl;
+    margin-bottom: 0px;
+    margin-left: 55px;
+    width: 42%;
+    height: 13px;
+    position: absolute;
+    bottom: 46px;
+    left: 16px;
+}
+
+
+.progressltr {
+    -webkit-appearance: none;
+    margin-bottom: 0px;
+    margin-left: 142px;
+    width: 42%;
+    height: 13px;
+    position: absolute;
+    bottom: 56px;
+    left: 75px;
+}
+.progressltr[value]::-webkit-progress-value {
+    background-color: green;
+    
+}
+
+.progressltr[value]::-webkit-progress-bar {
+        background-color: red;
+    }
+
+
+.pokemonbattle img {
+    padding-top: 160px;
+    width: 190px;
+    float: left;
+}
+
+.pokemonbattleMirror img {
+    padding-top: 160px;
+    width: 190px;
+    float: right;
+    -webkit-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+
+.blackimg {
+    filter: gray;
+    filter: grayscale(100%);
+}
+
+
+.blackattack {
+    filter: gray;
+    filter: grayscale(100%);
+    /*width: 150px;
+    height: 50px;
+    float: left;*/
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+}
+
+    .zoom:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+.divpro {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.divprooppo {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.openpok {
+    position: relative;
+    text-align: center;
+    
+}
+    .openpok img {
+        position: relative;
+        text-align: center;
+        width: 145px;
+        left: -3px;
+        padding-left: 20px;
+        float: left;
+    }
+
+
+
+.smallPokemonImage img {
+    top: 20px;
+    position: absolute;
+    width: 90px;
+}
+
+
+#myPokemonImage0 img {
+    left: 45px;
+}
+#myPokemonImage1 img {
+    left: 210px;
+}
+
+#myPokemonImage2 img {
+    left: 385px;
+}
+
+#myOppoImage0 img {
+    left: 45px;
+}
+#myOppoImage1 img {
+    left: 210px;
+}
+#myOppoImage2 img {
+    left: 385px;
+}
+
+#tdshow0 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#showimage0 img {
+    position: absolute;
+    bottom: 128px;
+    left: 80px;
+    height: 80px;
+}
+
+#pokedex  {
+    position:relative;
+}
+
+    #pokedex img {
+        width: 238px;
+        height: 212px;
+        padding-top: 90px;
+    }
+
+#tdshowdet0 {
+    position: relative;
+    top: -87px;
+    right: -6px;
+    color: yellow;
+}
+
+
+
+#tdshow1 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#showimage1 img {
+    position: absolute;
+    bottom: 130px;
+    left: 80px;
+    height: 80px;
+}
+
+/*audio {
+    display: none;
+    
+}*/
+
+#image0 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+#image1 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+#image2 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#randompokaball img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#heroImage {
+    position:relative;
+}
+#oppoImage {
+    position: relative;
+}
+
+.pokeballgif{
+
+}
+
+#me0 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+#me1 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#me2 img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+
+
+
+    
+
+   
+    

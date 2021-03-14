@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Pokémon Play
+    </title>
+    <link rel="icon" href="img/pokeball.png"
+          type="image/x-icon">
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="pokedex1.js"></script>
+    <script type="text/javascript" src="pokedex.json"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JavaScript.js"></script>
+
+
+</head>
+<body onload="checkLS()">
+
+    <!--<div class="background">-->
+    <!--מסך פתיחה-->
+    <div id="start" class="background" >
+        
+        <table class="tableCard">
+            <tr>
+                <td rowspan="2">
+                    <!--<img class="startimg" src="img/start_img.png" />-->
+                    <img class="startimg" src="img/pokemonstartgif.gif"  />
+                </td>
+                <td>
+                  
+
+                    <img class="starticon" src="img/pokemonplay.png" />
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    
+                    <div><img class="starticon zoom" src="img/startnewgame.jpg" onclick="removeImages()" onmouseover='' style='cursor: pointer;'/></div>
+                    <div id="lsgame">
+                        
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    <!--מסך בחירת פוקימונים-->
+
+    <div id="randomScreen" class="background" style="display:none">
+      
+        <table class="tableCard">
+
+
+            <tr>
+                <td id="randompokaball" style="width:20%" class="tdChoose" rowspan="3">
+                  
+                    <img  class="randomImg " src="img/Random_Button.png" onclick="randompick()" onmouseover='' style='cursor: pointer;'  />
+                </td>
+                <td id="choose1">
+                    <img class="tdChooseMe" src="img/clickompokeball.png" />
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td id="fightBtn" style="width:20%" class="tdChoose" rowspan="3">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td class="tdChoose" colspan="3">
+                    <table align="center">
+                        <tr>
+
+                            <td class="tdcard" id="card0" style="background-image:url(img/cardpokemon.png)">
+
+                                <table class="tableCard">
+                                    <tr class="trupper">
+                                        <td width="60%">&nbsp&nbsp&nbsp&nbsp   <dil" id="name0"> </dil"> </td>
+                                        <td>   <dil" id="hp0"> </dil"></td>
+                                    </tr>
+                                    <tr class="trmid">
+                                        <td colspan="2">
+                                            <tdq id="image0">
+
+                                            </tdq>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="trbuttom">
+                                        <td class="tdbuttoma">   <dil" id="attack0"> </dil"></td>
+                                        <td>  <dil" id="defense0"> </dil"></td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                            <td class="tdcard" id="card1" style="background-image:url(img/cardpokemon.png)">
+
+                                <table class="tableCard">
+                                    <tr class="trupper">
+                                        <td width="60%">&nbsp&nbsp&nbsp&nbsp   <dil" id="name1"> </dil"> </td>
+                                        <td> <dil" id="hp1">  </td>
+                                    </tr>
+                                    <tr class="trmid">
+                                        <td colspan="2">
+                                            <tdq id="image1">
+
+                                            </tdq>
+                                        </td>
+                                    </tr>
+                                    <tr class="trbuttom">
+                                        <td class="tdbuttoma">   <dil" id="attack1"> </dil"></td>
+                                        <td>  <dil" id="defense1"> </dil"></td>
+                                    </tr>
+
+                                </table>
+                            </td>
+
+                            <td class="tdcard" id="card2" style="background-image:url(img/cardpokemon.png)">
+
+                                <table class="tableCard">
+                                    <tr class="trupper">
+                                        <td width="60%">&nbsp&nbsp&nbsp&nbsp  <dil" id="name2"> </dil"> </td>
+                                        <td>  <dil" id="hp2">  </td>
+                                    </tr>
+                                    <tr class="trmid">
+                                        <td colspan="2">
+                                            <tdq id="image2">
+
+                                            </tdq>
+                                        </td>
+                                    </tr>
+                                    <tr class="trbuttom">
+                                        <td class="tdbuttoma">  <dil" id="attack2"> </dil"></td>
+                                        <td>   <dil" id="defense2"> </dil"></td>
+                                    </tr>
+
+                                </table>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td id="counter" colspan="3">
+                    <img class="tdChooseom" src="img/counter0.png" />
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!--<div  class="backgroundFight" id="fight" style="display:none;height:100% ">-->
+    <div id="fight" style="display:none" class="backgroundFight">
+        <!--מסך קרב-->
+       
+        <table class="tableCard">
+            <tr>
+                <td>
+                    <!--class="hpbar"-->
+                    <div>
+
+                        <div class="divpro">
+                            <img src="img/hphero.png" />
+                            <div id="heroNameDisplay"> </div>
+                            <progress id="heroHp" class="progressltr"> </progress>
+                            <div id="heroHpDisplay"></div>
+                        </div>
+
+                    </div>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <!--class="hpbarm"-->
+                    <div>
+                        <div class="divprooppo">
+                            <img src="img/hpoppo.png" />
+                            <div id="oppoNameDisplay"> </div>
+                            <progress id="oppoHp" class="progressrtl"></progress>
+                            <div id="oppoHpDisplay"></div>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+            <tr style="height:50%;">
+                <td >
+                    <div id="heroImage" class="pokemonbattleMirror">
+                        <div>
+                            
+                        </div>
+                    </div>
+                </td>
+
+                <td id="massageBoxup">
+                    <dil id="massageBox">
+                        
+                    </dil>
+                    <div id="smallcard" class="tableCardSmall" style="display:none">
+                        <table class="tableCard">
+                            <tr>
+                                <td id="tdshow0">
+                                    <div id="pokedex">
+                                        <img src="img/pokedex.png" />
+                                    </div>
+
+                                    <div id="showimage0" class="col-12" onclick="heroChange('0')">
+
+                                    </div>
+                                    <div class="col-12" id="tdshowdet0">
+                                        <div" id="showname0"> </div">
+                                        <div" id="showhp0"> </div"><br /><br />
+                                        <div" id="showattack0"></div">
+                                        <div" id="showdefense0"></div">
+                                    </div>
+
+                                </td>
+
+                                <td id="tdshow1">
+                                    <div id="pokedex">
+                                        <img src="img/pokedex.png" />
+                                    </div>
+
+                                    <div id="showimage1" class="col-12" onclick="heroChange('1')">
+
+                                    </div>
+                                    <div class="col-12" id="tdshowdet0">
+                                        <dil" id="showname1"> </dil">
+                                        <dil" id="showhp1"> </dil"><br /><br />
+                                        <dil" id="showattack1"></dil">
+                                        <dil" id="showdefense1"></dil">
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+
+
+                </td>
+                <td >
+                    <div id="oppoImage" class="pokemonbattle">
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <div  id="me0" class="openpok" onclick="changeme(0)">
+                        <img id="closeball0" src="img/openpokeball.png" />
+                        <div id="myPokemonImage0" class="smallPokemonImage"> </div>
+                    </div>
+
+                    <div  id="me1" class="openpok"  onclick="changeme(1)">
+                        <img id="closeball1" src="img/openpokeball.png" />
+                        <div id="myPokemonImage1" class="smallPokemonImage"> </div>
+                    </div>
+
+                    <div  id="me2" class="openpok"  onclick="changeme(2)">
+                        <img id="closeball2" src="img/openpokeball.png" />
+                        <div id="myPokemonImage2" class="smallPokemonImage"> </div>
+                    </div>
+
+                </td>
+
+                <td>
+                    <table class="tableCard">
+                        <tr>
+                            <td>
+                                <div id="attackcancel">
+                                    <img id="attack" class="attackbtn" src="img/attack.JPG" onclick="youAttack()" />
+                                </div>
+
+                                <div id="changecancel">
+                                    <img class="attackbtn" src="img/change.JPG" onclick="changePokemon()" />
+                                </div>
+                                <div id="catchbtn">
+                                    <img  class="attackbtn" src="img/catch.jpg" onclick="catchPokemon()" />
+                                </div>
+
+                                <div>
+                                    
+                                    <img class="attackbtn" src="img/newgame.JPG" onclick="newGame()" />
+                                </div>
+
+
+                                
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+                <td>
+
+                    <div  class="openpok">
+                        
+                        <img id="oppocloseball0" src="img/openpokeball.png"  />
+                        <div id="myOppoImage0" class="smallPokemonImage"></div>
+                    </div>
+
+                    <div class="openpok">
+                        <img id="oppocloseball1" src="img/openpokeball.png" />
+                        <div id="myOppoImage1" class="smallPokemonImage"> </div>
+                    </div>
+
+                    <div class="openpok">
+                        <img id="oppocloseball2" src="img/openpokeball.png" />
+                        <div id="myOppoImage2" class="smallPokemonImage"> </div>
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+</body>
+</html>
